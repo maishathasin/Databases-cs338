@@ -53,7 +53,6 @@ def import_csv_to_db(csv_file_path, db_path):
     conn.commit()
     cursor.close()
     conn.close()
-
 if __name__ == '__main__':
     csv_file_path = 'nyc-jobs-1 1.csv'
     db_path = 'job_portal.db'
