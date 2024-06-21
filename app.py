@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template, redirect, url_for
 import sqlite3
 from datetime import datetime
 
@@ -11,14 +11,23 @@ def get_db_connection():
 
 @app.route('/')
 def index():
-    return 'Hello, World! '
+    conn = get_db_connection()
+    cursor = conn.cursor()
+    
+    query = "SELECT * FROM JobPostings"
+    cursor.execute(query)
+    
+    jobs = cursor.fetchall()
+    
+    cursor.close()
+    conn.close()
+    
+    return render_template('index.html', jobs=jobs)
 
-
-#apiendppoints you would need postman or curl for this
 @app.route('/apply', methods=['POST'])
 def apply_to_job():
-    user_id = request.json['user_id']
-    job_id = request.json['job_id']
+    user_id = request.form['user_id']
+    job_id = request.form['job_id']
     
     conn = get_db_connection()
     cursor = conn.cursor()
@@ -30,7 +39,7 @@ def apply_to_job():
     cursor.close()
     conn.close()
     
-    return jsonify({"message": "Application submitted successfully!"})
+    return redirect(url_for('index'))
 
 @app.route('/user_applications/<int:user_id>', methods=['GET'])
 def get_user_applications(user_id):

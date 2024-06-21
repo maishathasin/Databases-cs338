@@ -1,0 +1,3 @@
+application_id,job_posting_id,applicant_id,application_date,status
+1,1,1,2024-06-21,Reviewed
+2,2,1,2024-06-21,Reviewed
