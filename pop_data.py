@@ -17,6 +17,7 @@ def import_csv_to_db(csv_file_path, db_path):
                 process_date = datetime.strptime(row['Process Date'], '%Y-%m-%dT%H:%M:%S').date() if row['Process Date'] else None
                 
                 # employer_id based on the agency name
+                # 
                 cursor.execute('SELECT employer_id FROM Employers WHERE company_name = ?', (row['Agency'],))
                 result = cursor.fetchone()
                 if result:
