@@ -22,6 +22,6 @@ def fetch_and_save_rows_to_csv(db_path, table_name, csv_file_path, limit=10):
 
 if __name__ == '__main__':
     db_path = 'job_portal.db'
-    table_name = 'Applicants'
-    csv_file_path = 'Applicants_sample.csv'
+    table_name = 'Users'
+    csv_file_path = 'Users_sample.csv'
     fetch_and_save_rows_to_csv(db_path, table_name, csv_file_path)

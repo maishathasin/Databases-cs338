@@ -1,0 +1,11 @@
+user_id,name,email,password,user_type,profile_created
+1,DEPARTMENT OF BUSINESS SERV.,departmentofbusinessserv.@example.com,password,employer,2024-06-21 20:55:13
+2,DEPT OF ENVIRONMENT PROTECTION,deptofenvironmentprotection@example.com,password,employer,2024-06-21 20:55:13
+3,TAXI & LIMOUSINE COMMISSION,taxi&limousinecommission@example.com,password,employer,2024-06-21 20:55:13
+4,DEPT OF INFO TECH & TELECOMM,deptofinfotech&telecomm@example.com,password,employer,2024-06-21 20:55:13
+5,LAW DEPARTMENT,lawdepartment@example.com,password,employer,2024-06-21 20:55:13
+6,NYC HOUSING AUTHORITY,nychousingauthority@example.com,password,employer,2024-06-21 20:55:13
+7,NYC EMPLOYEES RETIREMENT SYS,nycemployeesretirementsys@example.com,password,employer,2024-06-21 20:55:13
+8,DEPT OF HEALTH/MENTAL HYGIENE,deptofhealth/mentalhygiene@example.com,password,employer,2024-06-21 20:55:13
+9,OFFICE OF COLLECTIVE BARGAININ,officeofcollectivebargainin@example.com,password,employer,2024-06-21 20:55:13
+10,ADMIN FOR CHILDREN'S SVCS,adminforchildren'ssvcs@example.com,password,employer,2024-06-21 20:55:13
