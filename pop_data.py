@@ -11,14 +11,19 @@ def import_csv_to_db(csv_file_path, db_path):
         
         for row in reader:
             try:
-                # Convert date fields to proper date format
                 posting_date = datetime.strptime(row['Posting Date'], '%Y-%m-%dT%H:%M:%S').date() if row['Posting Date'] else None
                 post_until = datetime.strptime(row['Post Until'], '%Y-%m-%dT%H:%M:%S').date() if row['Post Until'] else None
                 posting_updated = datetime.strptime(row['Posting Updated'], '%Y-%m-%dT%H:%M:%S').date() if row['Posting Updated'] else None
                 process_date = datetime.strptime(row['Process Date'], '%Y-%m-%dT%H:%M:%S').date() if row['Process Date'] else None
                 
-                # Assuming employer_id is known or can be deduced, for now, we'll use a placeholder value
-                employer_id = 1
+                # employer_id based on the agency name
+                cursor.execute('SELECT employer_id FROM Employers WHERE company_name = ?', (row['Agency'],))
+                result = cursor.fetchone()
+                if result:
+                    employer_id = result[0]
+                else:
+                    print(f"Employer not found for agency: {row['Agency']}")
+                    continue
                 
                 cursor.execute('''
                     INSERT INTO JobPostings (

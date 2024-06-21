@@ -11,12 +11,22 @@ def import_applicants_csv_to_db(csv_file_path, db_path):
         
         for row in reader:
             cursor.execute('''
+                INSERT INTO Users (name, email, password, user_type)
+                VALUES (?, ?, ?, ?)
+            ''', (
+                row['Name'], row['Email'], 'password', 'applicant'
+            ))
+
+            user_id = cursor.lastrowid
+
+            
+            cursor.execute('''
                 INSERT INTO Applicants (
                     user_id, resume_link, cover_letter, is_student, university, availability, 
                     employment_type, phone
                 ) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
             ''', (
-                row['ID'], row['Resume'], row['Cover Letter'], 
+                user_id, row['Resume'], row['Cover Letter'], 
                 1 if row['Student'].lower() == 'yes' else 0, row['University'], 
                 row['Availability'], row['Employment Type'], row['Phone']
             ))
@@ -25,8 +35,6 @@ def import_applicants_csv_to_db(csv_file_path, db_path):
     cursor.close()
     conn.close()
 
-
-# generates synthetic applications from applicants and puts them in the first two JobPOstings
 def generate_synthetic_applications(db_path):
     conn = sqlite3.connect(db_path)
     cursor = conn.cursor()
@@ -59,8 +67,6 @@ if __name__ == '__main__':
     db_path = 'job_portal.db'
     applicants_csv_file_path = 'applicants.csv'
     
-    # Import applicants from CSV
     import_applicants_csv_to_db(applicants_csv_file_path, db_path)
     
-    # Generate synthetic applications
     generate_synthetic_applications(db_path)

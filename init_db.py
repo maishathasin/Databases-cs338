@@ -5,6 +5,17 @@ def initialise():
     cursor = conn.cursor()
 
     cursor.execute('''
+    CREATE TABLE IF NOT EXISTS Users (
+        user_id INTEGER PRIMARY KEY AUTOINCREMENT,
+        name TEXT NOT NULL,
+        email TEXT NOT NULL UNIQUE,
+        password TEXT NOT NULL,
+        user_type TEXT CHECK(user_type IN ('employer', 'applicant')) NOT NULL,
+        profile_created TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    )
+    ''')
+
+    cursor.execute('''
    CREATE TABLE Applicants (
     applicant_id INTEGER PRIMARY KEY AUTOINCREMENT,
     user_id INTEGER,
@@ -78,6 +89,19 @@ CREATE TABLE IF NOT EXISTS JobPostings (
     FOREIGN KEY (job_posting_id) REFERENCES JobPostings(job_posting_id),
     FOREIGN KEY (applicant_id) REFERENCES Applicants(applicant_id)
 );
+    ''')
+
+    # Create trigger to prevent duplicate applications
+    cursor.execute('''
+    CREATE TRIGGER IF NOT EXISTS prevent_duplicate_applications
+    BEFORE INSERT ON Applications
+    FOR EACH ROW
+    BEGIN
+        SELECT CASE
+            WHEN ((SELECT COUNT(*) FROM Applications WHERE job_posting_id = NEW.job_posting_id AND applicant_id = NEW.applicant_id) > 0)
+            THEN RAISE (ABORT, 'Duplicate application detected')
+        END;
+    END;
     ''')
 
     conn.commit()
