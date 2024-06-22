@@ -30,6 +30,26 @@ The repository includes a pre-populated SQLite database file (job_portal.db). Th
 ![ex2](images/ex2.png)
 
 
+# Current Feature supports 
+A nice front end in that allows the user to view all job posting and apply to a job, furthermore, we have also added a trigger to avoid duplicate applications in job postings. 
+![ex2](images/ex3.png)
+
+# Tables 
+Currently has 5 tables Applicants, Applications, Employers, JobPostings and Users    
+# Files 
+
+Applicants_sample.csv : A sample output of what the Applicants table looks like
+Applications_sample.csv: A sample output of what the Applications table looks like
+Employers_sample.csv: A sample output of what the Employers table looks like
+JobPostings_sample.csv: A sample output of what the JobPostings table looks like
+Users_sample.csv: A sample output of what the Users table looks like
+pop_app.py: Script to populate the applicant and application tables
+pop_data.py: Script to Jobpostings table
+pop_employers.py: Script to populate the Employers table
+init_db.py: Script to initialising the database 
+applicants.py: Script to create sample synthetic data of applicants
+
+
 
 
 
