@@ -2,7 +2,7 @@ import csv
 import sqlite3
 from datetime import datetime
 
-def import_csv_to_db(csv_file_path, db_path):
+def import_csv(csv_file_path, db_path):
     conn = sqlite3.connect(db_path)
     cursor = conn.cursor()
     
@@ -59,4 +59,4 @@ def import_csv_to_db(csv_file_path, db_path):
 if __name__ == '__main__':
     csv_file_path = 'nyc-jobs-1 1.csv'
     db_path = 'job_portal.db'
-    import_csv_to_db(csv_file_path, db_path)
+    import_csv(csv_file_path, db_path)

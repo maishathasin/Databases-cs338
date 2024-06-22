@@ -2,7 +2,7 @@ import csv
 import sqlite3
 from datetime import datetime
 
-def import_applicants_csv_to_db(csv_file_path, db_path):
+def import_csv(csv_file_path, db_path):
     conn = sqlite3.connect(db_path)
     cursor = conn.cursor()
     
@@ -35,7 +35,7 @@ def import_applicants_csv_to_db(csv_file_path, db_path):
     cursor.close()
     conn.close()
 
-def generate_synthetic_applications(db_path):
+def generate(db_path):
     conn = sqlite3.connect(db_path)
     cursor = conn.cursor()
     
@@ -46,11 +46,12 @@ def generate_synthetic_applications(db_path):
     job_posting_ids = [row[0] for row in cursor.fetchall()]
     
     application_data = []
-    status_options = ['Applied', 'Reviewed', 'Interviewed', 'Hired']
+    #synthetically add the applicants
+    options = ['Applied', 'Reviewed', 'Interviewed', 'Hired']
     for applicant_id in applicant_ids:
         for job_posting_id in job_posting_ids:
             application_date = datetime.now().date()
-            status = status_options[applicant_id % len(status_options)]  # Simple synthetic status assignment
+            status = options[applicant_id % len(options)]  
             application_data.append((job_posting_id, applicant_id, application_date, status))
     
     cursor.executemany('''
@@ -67,6 +68,6 @@ if __name__ == '__main__':
     db_path = 'job_portal.db'
     applicants_csv_file_path = 'applicants.csv'
     
-    import_applicants_csv_to_db(applicants_csv_file_path, db_path)
+    import_csv(applicants_csv_file_path, db_path)
     
-    generate_synthetic_applications(db_path)
+    generate(db_path)

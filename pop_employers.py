@@ -2,7 +2,7 @@ import csv
 import sqlite3
 
 
-def import_employers_csv_to_db(csv_file_path, db_path):
+def import_csv(csv_file_path, db_path):
     conn = sqlite3.connect(db_path)
     cursor = conn.cursor()
     with open(csv_file_path, 'r') as file:
@@ -25,7 +25,6 @@ def import_employers_csv_to_db(csv_file_path, db_path):
 
             user_id = cursor.lastrowid
 
-            # Insert the employer record
             cursor.execute('''
                 INSERT INTO Employers (
                     user_id, company_name, recruitment_contact
@@ -41,4 +40,4 @@ def import_employers_csv_to_db(csv_file_path, db_path):
 if __name__ == '__main__':
     db_path = 'job_portal.db'
     
-    import_employers_csv_to_db('nyc-jobs-1 1.csv', db_path)
+    import_csv('nyc-jobs-1 1.csv', db_path)
