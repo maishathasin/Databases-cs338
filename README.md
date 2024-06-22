@@ -39,17 +39,29 @@ Currently has 5 tables Applicants, Applications, Employers, JobPostings and User
 # Files 
 
 Applicants_sample.csv : A sample output of what the Applicants table looks like
+
 Applications_sample.csv: A sample output of what the Applications table looks like
+
 Employers_sample.csv: A sample output of what the Employers table looks like
+
 JobPostings_sample.csv: A sample output of what the JobPostings table looks like
+
 Users_sample.csv: A sample output of what the Users table looks like
+
 pop_app.py: Script to populate the applicant and application tables
+
 pop_data.py: Script to Jobpostings table
+
 pop_employers.py: Script to populate the Employers table
+
 init_db.py: Script to initialising the database 
+
 applicants.py: Script to create sample synthetic data of applicants
+
 test-sample.sql: Sql samples to test out code 
+
 test-sample.out: output of the samples 
+
 generate-sample.py: simple script to generate all the test-sample.sql queries and show it's output in the test-sample.out
 
 
