@@ -48,6 +48,9 @@ pop_data.py: Script to Jobpostings table
 pop_employers.py: Script to populate the Employers table
 init_db.py: Script to initialising the database 
 applicants.py: Script to create sample synthetic data of applicants
+test-sample.sql: Sql samples to test out code 
+test-sample.out: output of the samples 
+generate-sample.py: simple script to generate all the test-sample.sql queries and show it's output in the test-sample.out
 
 
 
