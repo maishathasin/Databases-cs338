@@ -32,7 +32,7 @@ def apply_to_job():
     conn = get_db_connection()
     cursor = conn.cursor()
     
-    query = "INSERT INTO Applications (user_id, job_id, application_date) VALUES (?, ?, ?)"
+    query = "INSERT INTO Applications (applicant_id, job_posting_id, application_date, status) VALUES (?, ?, ?, 'Applied')"
     cursor.execute(query, (user_id, job_id, datetime.now()))
     
     conn.commit()
@@ -46,7 +46,7 @@ def get_user_applications(user_id):
     conn = get_db_connection()
     cursor = conn.cursor()
     
-    query = "SELECT * FROM Applications WHERE user_id = ?"
+    query = "SELECT * FROM Applications WHERE applicant_id = ?"
     cursor.execute(query, (user_id,))
     
     applications = cursor.fetchall()

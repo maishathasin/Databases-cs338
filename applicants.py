@@ -33,11 +33,8 @@ def save_to_csv(data, filename):
         writer.writeheader()
         writer.writerows(data)
 
-# Generate data for 50 applicants
 applicant_data = generate_applicant_data(50)
 
-# Save the data to a CSV file
 save_to_csv(applicant_data, 'applicants.csv')
 
-print("CSV file 'applicants.csv' has been created successfully!")
 

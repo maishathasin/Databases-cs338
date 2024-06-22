@@ -1,41 +1,51 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Job Portal</title>
-</head>
-<body>
-    <h1>Job Listings</h1>
-    <table>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  </head>
+  <body>
+    <div class="container mt-5">
+      <h1>Job Postings</h1>
+      <table class="table table-striped">
         <thead>
-            <tr>
-                <th>Title</th>
-                <th>Description</th>
-                <th>Company</th>
-                <th>Location</th>
-                <th>Date Posted</th>
-                <th>Action</th>
-            </tr>
+          <tr>
+            <th>Job ID</th>
+            <th>Agency</th>
+            <th>Posting Type</th>
+            <th>Business Title</th>
+            <th>Job Category</th>
+            <th>Salary Range</th>
+            <th>Work Location</th>
+            <th>Action</th>
+          </tr>
         </thead>
         <tbody>
-            {% for job in jobs %}
-            <tr>
-                <td>{{ job.title }}</td>
-                <td>{{ job.description }}</td>
-                <td>{{ job.company }}</td>
-                <td>{{ job.location }}</td>
-                <td>{{ job.date_posted }}</td>
-                <td>
-                    <form action="{{ url_for('apply_to_job') }}" method="POST">
-                        <input type="hidden" name="user_id" value="1"> 
-                        <input type="hidden" name="job_id" value="{{ job.id }}">
-                        <button type="submit">Apply</button>
-                    </form>
-                </td>
-            </tr>
-            {% endfor %}
+          {% for job in jobs %}
+          <tr>
+            <td>{{ job.job_id }}</td>
+            <td>{{ job.agency }}</td>
+            <td>{{ job.posting_type }}</td>
+            <td>{{ job.business_title }}</td>
+            <td>{{ job.job_category }}</td>
+            <td>{{ job.salary_range_from }} - {{ job.salary_range_to }} {{ job.salary_frequency }}</td>
+            <td>{{ job.work_location }}</td>
+            <td>
+              <form action="{{ url_for('apply_to_job') }}" method="POST">
+                <input type="hidden" name="user_id" value="1"> <!-- Replace with actual user_id -->
+                <input type="hidden" name="job_id" value="{{ job.job_posting_id }}">
+                <button type="submit" class="btn btn-primary">Apply</button>
+              </form>
+            </td>
+          </tr>
+          {% endfor %}
         </tbody>
-    </table>
-</body>
+      </table>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  </body>
 </html>

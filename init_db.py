@@ -23,9 +23,9 @@ def initialise():
     cover_letter TEXT,
     is_student BOOLEAN,
     university TEXT,
-    availability TEXT,
+    availability BOOLEAN,
     employment_type TEXT,
-    phone TEXT,
+    phone INTEGER,
     FOREIGN KEY (user_id) REFERENCES Users(user_id)
 );
 
@@ -91,7 +91,7 @@ CREATE TABLE IF NOT EXISTS JobPostings (
 );
     ''')
 
-    # Create trigger to prevent duplicate applications
+    #trigger 
     cursor.execute('''
     CREATE TRIGGER IF NOT EXISTS prevent_duplicate_applications
     BEFORE INSERT ON Applications

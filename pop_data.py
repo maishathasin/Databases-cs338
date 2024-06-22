@@ -8,6 +8,8 @@ def import_csv_to_db(csv_file_path, db_path):
     
     with open(csv_file_path, 'r') as file:
         reader = csv.DictReader(file)
+        # take the first 100 only 
+        reader = reader[100]
         
         for row in reader:
             try:
