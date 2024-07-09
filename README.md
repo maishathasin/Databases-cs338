@@ -109,6 +109,11 @@ Currently has 6 tables Applicants, Applications, Employers, JobPostings,  Users,
 
 **test-sample.out**: output of the samples 
 
+
+**test-production.sql** :  test production sql 
+
+**test-production.out**: output of the production data 
+
 **generate-sample.py**: simple script to generate all the test-sample.sql queries and show it's output in the test-sample.out
 
 **members.md**: Our member contributions so far 
