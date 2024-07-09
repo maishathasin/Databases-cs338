@@ -49,8 +49,39 @@ A nice front end in that allows the user to view all job posting and apply to a 
 ## Milestone 2 
 We used Sveltekit and Shadcn components for a nicer finish!
 
-# Registration and login 
+### Registration  
+![ex2](images/ScreenRecording2024-07-08at10.07.50PM-ezgif.com-video-to-gif-converter.gif)
+
+### Log in  
+![ex2](images/ScreenRecording2024-07-08at10.24.51PM-ezgif.com-video-to-gif-converter.gif)
+
+### Search
 ![ex2](images/images/ScreenRecording2024-07-08at9.41.57PM-ezgif.com-video-to-gif-converter.gif)
+
+### Saved jobs
+![ex2](images/images/ScreenRecording2024-07-08at9.41.57PM-ezgif.com-video-to-gif-converter.gif)
+
+### Registration and login 
+![ex2](images/images/ScreenRecording2024-07-08at9.41.57PM-ezgif.com-video-to-gif-converter.gif)
+
+
+# Fancy Features 
+
+
+- Beautiful interface design, we use a frontend framework called Svelte with Shadcn/ui components for smooth interface and responsiveness even in mobile! 
+- We include pagination so only 10 job postings can be seen at a time 
+
+![ex2](images/ScreenRecording2024-07-08at10.57.36PM-ezgif.com-video-to-gif-converter.gif)
+
+- Since our dataset has a lot of information on each job and it would make the table messy, a user is able to click on the button see more so see most of the information of the job
+
+![ex2](images/ScreenRecording2024-07-08at11.01.40PM-ezgif.com-video-to-gif-converter.gif)
+
+
+
+
+
+
 
 # Tables 
 Currently has 5 tables Applicants, Applications, Employers, JobPostings,  Users, SavedJobPostings    
