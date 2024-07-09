@@ -4,7 +4,9 @@ Final project for CS 338
 
 # Technologies:
 Backend: Python, Flask, SQLite
-Frontend: Tailwind CSS, HTML, and potentially React if time permits, to create a smoother user interface.
+
+Frontend: Tailwind CSS, Sveltekit, Shadcn/UI components.
+
 
 
 # Getting started 
