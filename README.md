@@ -58,7 +58,7 @@ We used Sveltekit and Shadcn components for a nicer finish!
 ![ex2](images/ScreenRecording2024-07-08at10.24.51PM-ezgif.com-video-to-gif-converter.gif)
 
 ### Search
-![ex2](images/images/ScreenRecording2024-07-08at9.41.57PM-ezgif.com-video-to-gif-converter.gif)
+![ex2](images/ex7.png)
 
 ### Saved jobs
 ![ex2](images/ex4.png)
