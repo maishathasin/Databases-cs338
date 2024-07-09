@@ -8,10 +8,19 @@ Frontend: Tailwind CSS, HTML, and potentially React if time permits, to create a
 
 
 # Getting started 
+## Backend
 
 1. Create  a virtual environment using ```python3 -m venv env ``` and ```source env/bin/activate```
 2. clone this repo and install the requirements using ```pip install -r requirements```
 3. run ```python app.py```
+
+## Frontend 
+
+On another terminal:
+1. Go to the frontend directory  ```cd frontend```
+2. Run ```npm run dev```
+
+Note: Make sure the frontend and backend are running on two different ports
 
 
 # Using the Database
@@ -31,8 +40,16 @@ The repository includes a pre-populated SQLite database file (job_portal.db). Th
 
 
 # Current Feature supports 
+
+## Milestone 1 
 A nice front end in that allows the user to view all job posting and apply to a job, furthermore, we have also added a trigger to avoid duplicate applications in job postings. 
 ![ex2](images/ex3.png)
+
+
+## Milestone 2 
+We used Sveltekit and Shadcn components for a nicer finish!
+
+# Registration and login 
 
 # Tables 
 Currently has 5 tables Applicants, Applications, Employers, JobPostings and Users    

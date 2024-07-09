@@ -33,7 +33,7 @@ def save_to_csv(data, filename):
         writer.writeheader()
         writer.writerows(data)
 
-applicant_data = generate_applicant_data(50)
+applicant_data = generate_applicant_data(1000)
 
 save_to_csv(applicant_data, 'applicants.csv')
 

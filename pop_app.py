@@ -39,10 +39,10 @@ def generate(db_path):
     conn = sqlite3.connect(db_path)
     cursor = conn.cursor()
     
-    cursor.execute("SELECT applicant_id FROM Applicants LIMIT 2")
+    cursor.execute("SELECT applicant_id FROM Applicants LIMIT 500")
     applicant_ids = [row[0] for row in cursor.fetchall()]
     
-    cursor.execute("SELECT job_posting_id FROM JobPostings LIMIT 2")
+    cursor.execute("SELECT job_posting_id FROM JobPostings LIMIT 500")
     job_posting_ids = [row[0] for row in cursor.fetchall()]
     
     application_data = []

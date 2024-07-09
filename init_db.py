@@ -15,6 +15,15 @@ def initialise():
     )
     ''')
 
+
+    cursor.execute('''CREATE TABLE SavedJobPostings (
+   ...>     SavedJobPostingID INT PRIMARY KEY,
+   ...>     ApplicantID INT,
+   ...>     JobPostingID INT,
+   ...>     FOREIGN KEY (ApplicantID) REFERENCES Applicant(ApplicantID),
+   ...>     FOREIGN KEY (JobPostingID) REFERENCES JobPosting(JobPostingID)
+   ...> );''')
+
     cursor.execute('''
    CREATE TABLE Applicants (
     applicant_id INTEGER PRIMARY KEY AUTOINCREMENT,
