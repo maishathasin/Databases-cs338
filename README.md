@@ -59,10 +59,7 @@ We used Sveltekit and Shadcn components for a nicer finish!
 ![ex2](images/images/ScreenRecording2024-07-08at9.41.57PM-ezgif.com-video-to-gif-converter.gif)
 
 ### Saved jobs
-![ex2](images/images/ScreenRecording2024-07-08at9.41.57PM-ezgif.com-video-to-gif-converter.gif)
-
-### Registration and login 
-![ex2](images/images/ScreenRecording2024-07-08at9.41.57PM-ezgif.com-video-to-gif-converter.gif)
+![ex2](images/ex4.png)
 
 
 # Fancy Features 
@@ -84,7 +81,7 @@ We used Sveltekit and Shadcn components for a nicer finish!
 
 
 # Tables 
-Currently has 5 tables Applicants, Applications, Employers, JobPostings,  Users, SavedJobPostings    
+Currently has 6 tables Applicants, Applications, Employers, JobPostings,  Users, SavedJobPostings    
 
 # Files 
 
