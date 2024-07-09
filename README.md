@@ -50,9 +50,10 @@ A nice front end in that allows the user to view all job posting and apply to a 
 We used Sveltekit and Shadcn components for a nicer finish!
 
 # Registration and login 
+![ex2](images/images/ScreenRecording2024-07-08at9.41.57PM-ezgif.com-video-to-gif-converter.gif)
 
 # Tables 
-Currently has 5 tables Applicants, Applications, Employers, JobPostings and Users    
+Currently has 5 tables Applicants, Applications, Employers, JobPostings,  Users, SavedJobPostings    
 
 # Files 
 
