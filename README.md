@@ -114,6 +114,8 @@ Currently has 5 tables Applicants, Applications, Employers, JobPostings,  Users,
 
 **generate-sample.py**: simple script to generate all the test-sample.sql queries and show it's output in the test-sample.out
 
+**members.md**: Our member contributions so far 
+
 
 
 
