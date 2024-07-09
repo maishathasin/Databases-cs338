@@ -109,7 +109,6 @@ Currently has 6 tables Applicants, Applications, Employers, JobPostings,  Users,
 
 **test-sample.out**: output of the samples 
 
-
 **test-production.sql** :  test production sql 
 
 **test-production.out**: output of the production data 
