@@ -10,12 +10,18 @@ node_modules
 .DS_Store
 Thumbs.db
 
-# Env
+# Env files and directories
 .env
 .env.*
 !.env.example
 !.env.test
+env
+.env
+env/
+env.*
 
 # Vite
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
+# Node modules
+node_modules/

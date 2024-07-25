@@ -26,10 +26,13 @@
 	"dependencies": {
 		"bits-ui": "^0.21.12",
 		"clsx": "^2.1.1",
+		"formsnap": "^1.0.1",
 		"lucide-svelte": "^0.399.0",
 		"mode-watcher": "^0.3.1",
-		"svelte-sonner": "^0.3.25",
+		"svelte-sonner": "^0.3.27",
+		"sveltekit-superforms": "^2.16.1",
 		"tailwind-merge": "^2.4.0",
-		"tailwind-variants": "^0.2.1"
+		"tailwind-variants": "^0.2.1",
+		"zod": "^3.23.8"
 	}
 }

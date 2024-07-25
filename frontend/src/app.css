@@ -35,6 +35,17 @@
  
     --radius: 0.5rem;
   }
+
+  .hero-text {
+    font-size: 5rem;
+    font-weight: bold;
+    text-align: left;
+    margin-top: 0.5rem;
+    margin-left: 0;
+    color: black;
+    background-color: transparent !important;
+    font-family: 'Terminal Grotesque', sans-serif; /* Add fallback font */
+  }
  
   .dark {
     --background: 222.2 84% 4.9%;

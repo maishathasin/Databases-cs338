@@ -16,6 +16,6 @@ DELETE FROM Applications WHERE job_posting_id = 1 AND application_id = 1;
 -- Show all job postings, for formatting sake limited to 1 as description is large
 SELECT * FROM JobPostings Limit 1;
 
--- Show all the Save data 
+-- Show all the Saved job postings data 
 SELECT * FROM SavedJobPostings Limit 10;
 
