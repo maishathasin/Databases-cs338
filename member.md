@@ -36,5 +36,3 @@ Updated: July 8
 - Worked with team members to modify the format of the milestone as well as add new content and highlight them.
 
 ---
-
-This formatting should make the text more organized and easier to read.
